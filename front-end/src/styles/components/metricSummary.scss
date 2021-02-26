@@ -1,0 +1,121 @@
+.tile-metricSummary {
+  $infoBoxHeight: rem(84px);
+
+  @include tile;
+  @include gridWidth(12/12);
+  flex-grow: 1;
+  margin: $gutter / 2;
+  position: relative;
+
+  @include mediaFrom($breakSm) {
+    @include gridWidth(6/12);
+  }
+
+  @include mediaFrom($breakLg) {
+    @include gridWidth(3/12);
+  }
+
+  label {
+    @include visuallyHidden;
+  }
+
+  .shiny-input-container {
+    background-color: $white;
+    width: 100%;
+
+    > div {
+      @include dropdown;
+
+      select {
+        padding: $spacingSm;
+
+        @include mediaFrom($breakSm) {
+          padding-left: rem(32px);
+          padding-right: $spacingMd;
+        }
+
+        @include mediaFrom($breakSm) {
+          padding-left: rem(40px);
+        }
+      }
+    }
+  }
+
+  .shiny-html-output {
+    padding: $spacingSm $spacingMd $spacingSm rem(90px);
+    height: $infoBoxHeight;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    @include mediaFrom($breakSm) {
+      padding-left: $spacingMd;
+      padding-right: $spacingMd;
+    }
+
+    @include mediaFrom($breakLg) {
+      flex-wrap: wrap;
+    }
+  }
+
+  .icon {
+    display: block;
+    border-right: rem(2px) solid $greyLight;
+    padding-right: rem(20px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: rem(30px);
+    width: rem(30px);
+    position: absolute;
+    left: rem(35px);
+    bottom: $infoBoxHeight / 2;
+    transform: translateY(50%);
+
+    @include mediaFrom($breakSm) {
+      bottom: auto;
+      left: rem(8px);
+      top: rem(18px);
+      z-index: 1;
+      pointer-events: none;
+      transform: translateY(-50%);
+      width: auto;
+      height: auto;
+      border: none;
+    }
+  }
+
+  .material-icons {
+    color: $greyDark;
+    font-size: rem(25px);
+
+    @include mediaFrom($breakSm) {
+      font-size: rem(20px);
+    }
+  }
+
+  .metric {
+    display: inline-block;
+    font-size: rem(20px);
+    margin-bottom: rem(4px);
+
+    @include mediaFrom($breakSm) {
+      font-size: rem(28px);
+      margin-bottom: rem(12px);
+    }
+
+    @include mediaFrom($breakLg) {
+      font-size: rem(32px);
+    }
+  }
+
+  .change-value {
+    font-size: rem(16px);
+
+    @include mediaFrom($breakSm) {
+      position: absolute;
+      right: rem(12px);
+      bottom: rem(12px);
+    }
+  }
+}

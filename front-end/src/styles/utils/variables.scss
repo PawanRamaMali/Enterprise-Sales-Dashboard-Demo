@@ -1,0 +1,39 @@
+// breakpoints
+$breakSm: 576px;
+$breakMd: 768px;
+$breakLg: 992px;
+$breakXl: 1200px;
+
+// grid
+$maxContentWidth: rem(1500px);
+$gutter: rem(16px);
+
+// fonts
+$fontPrimary: "Maven Pro", sans-serif;
+
+// colors
+$white: #fff;
+$green: #bdd64b;
+$yellow: #f8d84d;
+$orange: #fe9932;
+$red: #fb5151;
+$blue: #29bed8;
+$beigeLight: #f5f2ee;
+$greyLight: #e0e2e5;
+$greyMid: #bdc2c6;
+$greyDark: #585858;
+
+$colorFinancial: $blue;
+$colorUsers: $yellow;
+$colorOrders: $orange;
+$colorComplaints: $red;
+$colorBackground: $beigeLight;
+$colorFont: $greyDark;
+
+// box shadow
+$boxShadow: 5px 5px 5px -3px transparentize($greyDark, 0.7);
+
+// spacings
+$spacingSm: rem(8px);
+$spacingMd: rem(20px);
+$spacingLg: rem(32px);

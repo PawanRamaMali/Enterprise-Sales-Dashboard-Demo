@@ -1,0 +1,43 @@
+body {
+  background-color: $colorBackground;
+  margin: 0;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+*:focus {
+  outline: none;
+}
+
+.userTabbed *:focus {
+  outline: 2px solid $blue;
+}
+
+.page-main-content {
+  @include outerContainer;
+}
+
+.page-section {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin-left: $gutter / -2;
+  margin-right: $gutter / -2;
+}
+
+.subsection {
+  @include gridWidth(12/12);
+  margin: $gutter / 2;
+
+  @include mediaFrom($breakLg) {
+    @include gridWidth(6/12);
+  }
+}

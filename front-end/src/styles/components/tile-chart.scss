@@ -1,0 +1,33 @@
+.tile-chart {
+  @include tile;
+  margin-bottom: $spacingMd;
+
+  &:last-of-type {
+    margin-bottom: 0;
+  }
+
+  .tile-header {
+    background-color: $white;
+
+    label {
+      @include visuallyHidden;
+    }
+
+    .shiny-input-container {
+      width: auto;
+
+      > div {
+        @include dropdown;
+
+        select {
+          padding: $spacingSm;
+
+          @include mediaFrom($breakSm) {
+            padding-left: $spacingMd;
+            padding-right: $spacingMd;
+          }
+        }
+      }
+    }
+  }
+}
